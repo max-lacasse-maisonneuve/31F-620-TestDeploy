@@ -23,13 +23,20 @@
         <section data-page="accueil">
             <h1>Accueil</h1>
             <div class="liste">
+              
+            </div>
+            <nav>
+                <button data-direction="-1">Reculer</button>
+                <button data-direction="1">Avancer</button>
+            </nav>
+            <template id="abribus">
                 {{ #abribus }}
                 <div class="card" id="{{ID}}">
                     <h2>{{ADRESSE}}</h2>
                     <p>{{DATE_MODIFICATION}}</p>
                 </div>
                 {{ /abribus }}
-            </div>
+            </template>
         </section>
 
         <section data-page="contact">

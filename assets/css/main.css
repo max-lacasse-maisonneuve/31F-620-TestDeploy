@@ -21,6 +21,8 @@ nav {
         flex-direction: column;
         padding: 5rem;
         border: 2px solid var(--coul-principale-200);
+        opacity: 0;
+        transform: translateX(-100%);
     }
 }
 
