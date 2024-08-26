@@ -1,0 +1,34 @@
+@import url("./base/reset.css");
+@import url("./base/colors.css");
+@import url("./base/typography.css");
+body {
+    background-color: var(--coul-principale);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--coul-principale-200);
+}
+.liste {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .card {
+        flex-basis: 33.3%;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem;
+        border: 2px solid var(--coul-principale-200);
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+/* Doit être en dernier */
+.invisible {
+    display: none;
+}
