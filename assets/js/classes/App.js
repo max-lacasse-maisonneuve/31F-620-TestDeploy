@@ -10,7 +10,7 @@ class App {
         //Variables pour la pagination
         this.pageIndex = 0;
         this.pageAmount = 6;
-
+        this.abribus = [];
         this.sectionAccueil = document.querySelector("[data-page='accueil']");
         this.sectionContact = document.querySelector("[data-page='contact']");
         this.listeAbribusHTML = document.querySelector(".liste");
@@ -51,6 +51,7 @@ class App {
             "https://www.donneesquebec.ca/recherche/dataset/b36be5a9-c69d-40b7-b024-f61813cc26f9/resource/10c42538-b581-432f-8695-0f5d55122590/download/abribus.json"
         );
         this.abribus = await this.donnees.json();
+        return this.abribus;
     }
 
     /**
@@ -60,6 +61,7 @@ class App {
         let clone = [...this.abribus];
         let template = document.querySelector("template#abribus").innerHTML;
         let donneesAfficher = clone.splice(this.pageIndex, this.pageAmount);
+        console.log(donneesAfficher);
 
         let data = { abribus: donneesAfficher };
         this.listeAbribusHTML.innerHTML = mustache.render(template, data);
@@ -112,6 +114,14 @@ class App {
         this.pageIndex -= this.pageAmount;
         this.afficherAccueil();
     }
+
+    // formatterImage(nomActivite) {
+    //     const image = nomActivite
+    //         .trim()
+    //         .toLowerCase()
+    //         .replaceAll(/[\s-\.]/gi, "-");
+    //     return `${image}.svg`;
+    // }
 }
 
 export default App;

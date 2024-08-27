@@ -11,9 +11,10 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-      <script type="module" crossorigin src="/31F-620-TestDeploy/assets/index-Vtx8vQpL.js"></script>
-      <link rel="stylesheet" crossorigin href="/31F-620-TestDeploy/assets/index-C6D9YiYm.css">
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+        <script type="module" crossorigin src="/31F-620-TestDeploy/assets/index-KMpPPxwY.js"></script>
+        <link rel="stylesheet" crossorigin href="/31F-620-TestDeploy/assets/index-C6D9YiYm.css" />
     </head>
     <body>
         <nav>
@@ -22,20 +23,19 @@
         </nav>
         <section data-page="accueil">
             <h1>Accueil</h1>
-            <div class="liste">
-              
-            </div>
+            <div class="liste"></div>
             <nav>
                 <button data-direction="-1">Reculer</button>
                 <button data-direction="1">Avancer</button>
             </nav>
             <template id="abribus">
-                {{ #abribus }}
+                {{#abribus}}
                 <div class="card" id="{{ID}}">
                     <h2>{{ADRESSE}}</h2>
                     <p>{{DATE_MODIFICATION}}</p>
+                    <p>{{EMPLACEMENT}}</p>
                 </div>
-                {{ /abribus }}
+                {{/abribus}}
             </template>
         </section>
 
